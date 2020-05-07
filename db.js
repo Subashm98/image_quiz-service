@@ -24,7 +24,7 @@ const postgrePool = new Pool({
   connectionString: isProduction ? process.env.DATABASE_URL : postgreConnectionString,
   ssl: true,
 });
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 
 function getAllThemes() {
